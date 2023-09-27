@@ -1,0 +1,1 @@
+// we will solve 1st pattern here.
