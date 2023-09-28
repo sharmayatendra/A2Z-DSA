@@ -4,6 +4,9 @@
 // * * 
 // * * *
 
+/**
+ * This function will take a param `n` and returns the above pattern
+ */
 function pattern2(n) {
     let str = '';
     for (let i = 0; i < n; i++) {
