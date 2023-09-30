@@ -6,6 +6,9 @@
         3 3 3
  */
 
+/**
+ * This function use to display the above pattern as required.
+ */
 function pattern4(n) {
     let pattern = 0;
     for (let i = 1; i <= n; i++) {
