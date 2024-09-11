@@ -28,3 +28,19 @@ function newPattern4(n) {
 }
 
 console.log(newPattern4(3));
+
+// * * *
+// * *
+// *
+function newPattern5(n) {
+  let str = "";
+  for (let i = 0; i < n; i++) {
+    for (let j = n; j > i; j--) {
+      str += "* ";
+    }
+    str += "\n";
+  }
+  return str;
+}
+
+console.log(newPattern5(3));
