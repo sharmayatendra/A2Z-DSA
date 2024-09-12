@@ -60,3 +60,32 @@ function newPattern6(n) {
 }
 
 console.log(newPattern6(3));
+
+//    *
+//  * * *
+// * * * * *
+// logic building: i = 0 ==> space: 2, star: 1, space: 2 || i = 1 => space:1, star: 3, space:1 and so onn.
+function newPattern7(n) {
+  let str = "";
+  for (let i = 0; i < n; i++) {
+    // space:
+    for (let j = 0; j < n - (i + 1); j++) {
+      str += " ";
+    }
+
+    // star
+    for (let j = 0; j < 2 * i + 1; j++) {
+      str += "*";
+    }
+
+    // space:
+    for (let j = 0; j < n - (i + 1); j++) {
+      str += " ";
+    }
+
+    str += "\n";
+  }
+  return str;
+}
+
+console.log(newPattern7(5));
