@@ -44,3 +44,19 @@ function newPattern5(n) {
 }
 
 console.log(newPattern5(3));
+
+// 123
+// 12
+// 1
+function newPattern6(n) {
+  let numberPattern = "";
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n - i; j++) {
+      numberPattern += j + 1 + " ";
+    }
+    numberPattern += "\n";
+  }
+  return numberPattern;
+}
+
+console.log(newPattern6(3));
