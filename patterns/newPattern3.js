@@ -66,7 +66,7 @@ console.log(newPattern6(3));
 // * * * * *
 // logic building: i = 0 ==> space: 2, star: 1, space: 2 || i = 1 => space:1, star: 3, space:1 and so onn.
 function newPattern7(n) {
-  let str = "";
+  let str = " ";
   for (let i = 0; i < n; i++) {
     // space:
     for (let j = 0; j < n - (i + 1); j++) {
@@ -95,26 +95,42 @@ console.log(newPattern7(5));
 //    *
 // logic: i = 0 ==> space:0, star: 3, space:0 || i=1 => space: 1, star: 2, space:1, & so onn.
 function newPattern8(n) {
-  let str = "";
+  let str = " ";
   for (let i = 0; i < n; i++) {
     // space
-    for (j = 0; j < i; j++) {
+    for (let j = 0; j <= i; j++) {
       str += " ";
     }
 
-    // star
-    for (j = 0; j < n - i; j++) {
-      str += "* ";
+    // stars
+    for (let j = 0; j < 2 * n - 2 * i - 1; j++) {
+      str += "*";
     }
 
     // space
-    for (j = 0; j < i; j++) {
+    for (let j = 0; j <= i; j++) {
       str += " ";
     }
-
     str += "\n";
   }
   return str;
 }
 
 console.log(newPattern8(4));
+
+// for n = 3
+//     *
+//   * * *
+// * * * * *
+// * * * * *
+//   * * *
+//     *
+// logic i=0, space: 2
+function newPattern9(n) {
+  const x = newPattern7(n);
+  const y = newPattern8(n);
+  const z = x + y;
+  return z;
+}
+
+console.log(newPattern9(4));
