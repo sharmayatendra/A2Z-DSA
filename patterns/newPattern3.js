@@ -134,3 +134,28 @@ function newPattern9(n) {
 }
 
 console.log(newPattern9(4));
+
+//  *
+//  * *
+//  * * *
+//  * *
+//  *
+function newPattern10(n) {
+  let str = "";
+  for (i = 0; i < 2 * n - 1; i++) {
+    if (i >= n) {
+      for (j = i; j < 2 * n - 1; j++) {
+        str += "*";
+      }
+    } else {
+      for (j = 0; j < i + 1; j++) {
+        str += "*";
+      }
+    }
+
+    str += "\n";
+  }
+  return str;
+}
+
+console.log(newPattern10(3));
