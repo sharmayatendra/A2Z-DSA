@@ -159,3 +159,30 @@ function newPattern10(n) {
 }
 
 console.log(newPattern10(3));
+
+//   1
+//   0 1
+//   1 0 1
+// logic: i=1,
+function newPattern11(n) {
+  let start;
+  let row = "";
+
+  // Outer loop for the no. of rows
+  for (let i = 0; i < n; i++) {
+    // if the row index is even, print 1 first
+    if (i % 2 === 0) start = 1;
+    // if odd, print 0 first
+    else start = 0;
+
+    // We alternatively print 1's and 0's in each row
+    for (let j = 0; j <= i; j++) {
+      row += start;
+      start = 1 - start; // Toggle between 1 and 0
+    }
+    row += "\n";
+  }
+  return row;
+}
+
+console.log(newPattern11(3));
