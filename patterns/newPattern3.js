@@ -186,3 +186,34 @@ function newPattern11(n) {
 }
 
 console.log(newPattern11(3));
+
+//   1         1
+//   1 2     2 1
+//   1 2 3 3 2 1
+// logic: i=1,
+function newPattern12(n) {
+  let numberPattern = "";
+  let space = 2 * (n - 1);
+  for (let i = 1; i <= n; i++) {
+    // number
+    for (let j = 1; j <= i; j++) {
+      numberPattern += j;
+    }
+
+    // space
+    for (let j = 1; j <= space; j++) {
+      numberPattern += " ";
+    }
+
+    // number
+    for (let j = i; j >= 1; j--) {
+      numberPattern += j;
+    }
+
+    numberPattern += "\n";
+    space -= 2;
+  }
+  return numberPattern;
+}
+
+console.log(newPattern12(3));
