@@ -236,3 +236,19 @@ function newPattern13(n) {
 }
 
 console.log(newPattern13(5));
+
+//  A
+//  A B
+//  A B C
+function newPattern14(n) {
+  let str = "";
+  for (let i = 0; i < n; i++) {
+    for (let j = 65; j <= 65 + i; j++) {
+      str += String.fromCharCode(j) + " ";
+    }
+    str += "\n";
+  }
+  return str;
+}
+
+console.log(newPattern14(5));
