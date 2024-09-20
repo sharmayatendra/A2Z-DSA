@@ -217,3 +217,22 @@ function newPattern12(n) {
 }
 
 console.log(newPattern12(3));
+
+//    1
+//    2 3
+//    4 5 6
+//    7 8 9 10
+function newPattern13(n) {
+  let start = 1;
+  let pattern = "";
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+      pattern += start + " ";
+      start += 1;
+    }
+    pattern += "\n";
+  }
+  return pattern;
+}
+
+console.log(newPattern13(5));
